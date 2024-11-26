@@ -1,5 +1,11 @@
+import Navbar from "../components/Navbar";
+
 const Navigation = () => {
-  return;
+  return (
+    <div className="navigation">
+      <Navbar />
+    </div>
+  );
 };
 
 export default Navigation;
