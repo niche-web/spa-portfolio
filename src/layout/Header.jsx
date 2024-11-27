@@ -4,8 +4,8 @@ import Button from "../components/Button";
 const Header = () => {
   return (
     <>
-      <header className="header-text">
-        <div className="header-text__main">
+      <div className="header__text">
+        <div className="header__text--main">
           <h1 className="heading heading--xl">
             Nice to meet you! I&rsquo;m <a href="#">Adam Keyes</a>.
           </h1>
@@ -14,13 +14,14 @@ const Header = () => {
             accessible web apps that users love.
           </p>
         </div>
-        <div className="header-text__cta ">
+        <div className="header__text--cta ">
           <Button href="#" />
         </div>
-      </header>
-      <div className="header-photo">
+      </div>
+      <div className="header__photo">
         <img className="photo" src={photo} alt="Profile photo" />
       </div>
+      <hr className="sep-line" />
     </>
   );
 };
