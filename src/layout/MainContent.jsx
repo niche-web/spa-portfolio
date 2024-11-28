@@ -1,5 +1,11 @@
+import SectionSkills from "./SectionSkills";
+
 const MainContent = () => {
-  return <main></main>;
+  return (
+    <main className="main-content">
+      <SectionSkills />
+    </main>
+  );
 };
 
 export default MainContent;
