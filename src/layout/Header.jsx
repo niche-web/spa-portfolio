@@ -1,5 +1,5 @@
-import photo from "../assets/images/image-profile-desktop.webp";
 import Button from "../components/Button";
+import ResponsiveImg from "../components/ResponsiveImg";
 
 const Header = () => {
   return (
@@ -19,7 +19,13 @@ const Header = () => {
         </div>
       </div>
       <div className="header__photo">
-        <img className="photo" src={photo} alt="Profile photo" />
+        <ResponsiveImg
+          sources="/images/image-profile-desktop.webp 890w, /images/image-profile-tablet.webp 646w, images/image-profile-mobile.webp 348w"
+          sizes="(max-width: 375px) 348px, (min-width: 375px) and (max-width: 768px) 646px, 890px"
+          className="photo"
+          src="/images/image-profile-desktop.webp"
+          alt="Profile photo"
+        />
       </div>
       <hr className="sep-line" />
     </>
