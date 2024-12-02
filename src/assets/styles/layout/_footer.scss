@@ -4,6 +4,8 @@
   grid-column: center-start / center-end;
   grid-row: 5 / 6;
   &__background {
+    // margin-bottom: 16.2rem;
+
     grid-column: full-start / full-end;
     grid-row: 5 / 6;
     background-color: $tertiary-color;
