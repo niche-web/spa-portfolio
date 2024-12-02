@@ -1,12 +1,63 @@
+@use "../abstracts/variables" as *;
+
 @font-face {
   font-family: " SpaceGrotesk";
-  src: url("../../fonts/static/SpaceGrotesk-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/static/SpaceGrotesk-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "SpaceGrotesk";
-  src: url("../../fonts/static/SpaceGrotesk-Medium.ttf") format("truetype");
+  src: url("../../assets/fonts/static/SpaceGrotesk-Medium.ttf")
+    format("truetype");
   font-weight: 500;
   font-style: normal;
+}
+
+html {
+  font-family: "SpaceGrotesk", sans-serif;
+  color: $text-color;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.heading {
+  color: $heading-color;
+  &--xl {
+    font-size: $xl-size;
+    line-height: 1;
+    letter-spacing: -0.25rem;
+  }
+  &--l {
+    font-size: $l-size;
+    line-height: 1.17;
+    letter-spacing: -0.15rem;
+  }
+  &--m {
+    font-size: $m-size;
+    line-height: 1.33;
+  }
+  &--s {
+    text-transform: uppercase;
+    font-size: $xs-size;
+    line-height: 1.625;
+    letter-spacing: 0.23rem;
+  }
+}
+@-moz-document url-prefix() {
+  .heading--xl {
+    letter-spacing: -0.3rem;
+  }
+}
+
+.paragraph {
+  font-weight: 500;
+  font-style: normal;
+  font-size: $s-size;
+  line-height: 1.6;
 }

@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    font-size: 3.2rem;
+    line-height: 1;
+    letter-spacing: -0.44px;
+  }
+  &__social {
+    display: flex;
+    gap: 3rem;
+    margin-right: 3rem;
+  }
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    &:hover {
+      fill: $secondary-color;
+    }
+  }
+}

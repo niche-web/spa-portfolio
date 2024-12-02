@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body,
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+textarea,
+input,
+button {
+  color: inherit;
+  font: inherit;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+a:link,
+a:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: currentColor;
+}
+
+a:hover,
+a:active {
+  color: $secondary-color;
+}

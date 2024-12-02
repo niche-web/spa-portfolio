@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as m;
+
+.textfield {
+  &__input-elem {
+    width: 100%;
+    background-color: transparent;
+    padding: 0 2.7rem 1.6rem;
+    &,
+    &::placeholder {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      line-height: 1.625;
+      letter-spacing: -0.22px;
+    }
+  }
+  &__input {
+    position: relative;
+    border-bottom: 1px solid $gray-color;
+    margin-bottom: 0.843rem;
+  }
+  &__error {
+    text-align: right;
+    color: $error-color;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__invalid {
+    .textfield__input::after {
+      @include m.error-icon;
+    }
+    .textfield__error {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  textarea:not(:focus)::-webkit-scrollbar {
+    display: none;
+  }
+}

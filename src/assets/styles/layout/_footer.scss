@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+  grid-column: center-start / center-end;
+  grid-row: 5 / 6;
+  &__background {
+    grid-column: full-start / full-end;
+    grid-row: 5 / 6;
+    background-color: $tertiary-color;
+    background-image: url("../../assets/images/pattern-rings.svg");
+    background-repeat: no-repeat;
+    background-size: 36.5%;
+    background-position: -20.7rem 32.7rem;
+  }
+  .navbar {
+    margin: 4.7rem 0 9.2rem;
+
+    &__social {
+      margin: 0;
+    }
+  }
+}

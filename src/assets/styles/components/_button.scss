@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+
+.button {
+  background-color: transparent;
+  border-bottom: 1px solid $secondary-color;
+  padding: 1rem 0;
+  transition: color 0.2s;
+  &:hover,
+  &:active {
+    cursor: pointer;
+    color: $secondary-color;
+  }
+}
