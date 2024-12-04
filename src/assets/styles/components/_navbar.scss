@@ -15,10 +15,11 @@
     margin-right: 3rem;
   }
   &__icon {
-    width: 2.4rem;
-    height: 2.4rem;
+    color: $heading-color;
+    width: 24px;
+    height: 24px;
     &:hover {
-      fill: $secondary-color;
+      color: $secondary-color;
     }
   }
 }
