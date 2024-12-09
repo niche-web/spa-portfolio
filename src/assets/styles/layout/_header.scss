@@ -1,43 +1,118 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .header {
-  &__text {
-    grid-row: 1 / 3;
+  &__main {
+    grid-row: 2 / 3;
     grid-column: center / col-end 8;
+    padding-top: 6.5rem;
     z-index: 10;
-    display: grid;
-    grid-template-columns: auto;
-    background-image: url("../../assets/images/pattern-circle.svg");
-    background-repeat: no-repeat;
-    background-size: 12.9rem 12.9rem;
-    background-position: bottom 70px right;
 
-    &--main {
-      grid-row: 1 / 3;
-      grid-column: 1 / 2;
-      align-self: center;
-
-      a {
-        border-bottom: 0.8rem solid $secondary-color;
-      }
-      p {
-        width: 50%;
-        margin-top: 4.2rem;
+    @include respond(mobile) {
+      grid-row: 3 / 4;
+      grid-column: center;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      background: none;
+      margin-top: -4rem;
+      width: 34.5rem;
+      padding: 0;
+    }
+  }
+  &__main--container {
+    @include respond(mobile) {
+      text-align: center;
+    }
+  }
+  &__heading {
+    line-break: normal;
+    a {
+      border-bottom: 0.8rem solid $secondary-color;
+    }
+    .brake {
+      @include respond(mobile) {
+        display: none;
       }
     }
-    &--cta {
-      grid-row: 2 / 3;
-      grid-column: 1 / 2;
-      z-index: 20;
-      align-self: center;
+  }
+  &__paragraph {
+    width: 42rem;
+    margin-top: 4.2rem;
+    margin-bottom: 3rem;
+    @include respond(tab-portrait) {
+      margin-top: 6rem;
+      margin-bottom: 3.4rem;
     }
+
+    @include respond(mobile) {
+      margin: 4rem auto;
+      text-align: justify;
+      text-align-last: center;
+      width: 95%;
+    }
+  }
+  &__cta {
   }
   &__photo {
     grid-row: 1 / 3;
     grid-column: col-start 8 / center;
+
+    @include respond(tab-portrait) {
+      grid-column: col-start 8 / full;
+    }
+    @include respond(mobile) {
+      grid-row: 1 / 3;
+      grid-column: photo;
+      width: 17.42rem;
+      height: 38.3rem;
+      background: linear-gradient(to top, $tertiary-color 10%, transparent);
+    }
     .photo {
+      grid-column: 2 / 3;
       display: block;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include respond(mobile-landscape) {
+        object-position: center;
+      }
+      @include respond(mobile) {
+        object-position: center 5.5rem;
+        // filter: brightness() contrast();
+      }
+    }
+  }
+  &__background {
+    grid-row: 2 / 3;
+    grid-column: full / 5;
+    background-image: url("../../assets/images/pattern-rings.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    @include respond(tab-portrait) {
+      grid-column: full / 6;
+    }
+    @include respond(mobile) {
+      grid-column: full / middle-cut;
+    }
+  }
+  &__photo-decor {
+    grid-column: col-start 7 / col-end 8;
+    grid-row: 2 / 3;
+    z-index: 20;
+
+    background-image: url("../../assets/images/pattern-circle.svg");
+    background-repeat: no-repeat;
+    background-size: 12.9rem;
+    background-position: center bottom 70px;
+
+    @include respond(tab-portrait) {
+      grid-column: col-start 11 / full;
+      background-position: right -75px bottom;
+    }
+    @include respond(mobile) {
+      grid-column: full;
+      background-position: right -75px bottom;
     }
   }
 }

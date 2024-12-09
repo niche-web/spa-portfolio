@@ -13,4 +13,11 @@ $xl-size: 8.8rem !default;
 $l-size: 4.6rem !default;
 $m-size: 2.4rem !default;
 $s-size: 1.8rem !default;
-$xs-size: 1.6rem !default;
+$xs-size: clamp(16px, 1.6rem, 3rem) !default;
+
+///@type Breakpoint
+$bp-laptop: 1160px;
+$bp-tab-land: 1024px;
+$bp-tab-port: 940px;
+$bp-mobile-land: 765px;
+$bp-mobile-port: 650px;

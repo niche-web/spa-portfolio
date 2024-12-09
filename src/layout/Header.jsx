@@ -1,32 +1,38 @@
 import Button from "../components/Button";
 import ResponsiveImg from "../components/ResponsiveImg";
+import photoDesktop from "../assets/images/image-profile-desktop.webp";
+import photoTablet from "../assets/images/image-profile-tablet.webp";
+import photoMobile from "../assets/images/image-profile-mobile.webp";
 
 const Header = () => {
   return (
     <>
-      <div className="header__text">
-        <div className="header__text--main">
-          <h1 className="heading heading--xl">
-            Nice to meet you! I&rsquo;m <a href="#">Adam Keyes</a>.
-          </h1>
-          <p className="paragraph">
-            Based in UK. I&apos;m a frontend developer passionate about building
-            accessible web apps that users love.
-          </p>
-        </div>
-        <div className="header__text--cta ">
-          <Button href="#" />
-        </div>
-      </div>
+      <div className="header__background"></div>
+      <div className="header__photo-decor"></div>
       <div className="header__photo">
         <ResponsiveImg
-          sources="/images/image-profile-desktop.webp 890w, /images/image-profile-tablet.webp 646w, images/image-profile-mobile.webp 348w"
-          sizes="(max-width: 375px) 348px, (min-width: 375px) and (max-width: 768px) 646px, 890px"
+          sources={`${photoMobile} 348w, ${photoTablet} 646w, ${photoDesktop} 890w`}
+          sizes="(max-width: 650px) 348px, (min-width: 651px and max-width: 940px) 646px, 890px"
           className="photo"
-          src="/images/image-profile-desktop.webp"
+          // src={photoDesktop}
           alt="Profile photo"
         />
       </div>
+      <div className="header__main">
+        <div className="header__main--container">
+          <h1 className="header__heading heading heading--xl">
+            Nice to <wbr />
+            meet you!
+            <wbr className="brake" /> I&rsquo;m <a href="#">Adam Keyes</a>.
+          </h1>
+          <p className="header__paragraph paragraph">
+            Based in UK. I&apos;m a frontend developer passionate about building
+            accessible web apps that users love.
+          </p>
+          <Button classes="header__cta" href="#" />
+        </div>
+      </div>
+
       <hr className="sep-line" />
     </>
   );

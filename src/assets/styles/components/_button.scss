@@ -3,7 +3,7 @@
 .button {
   background-color: transparent;
   border-bottom: 1px solid $secondary-color;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
   transition: color 0.2s;
   &:hover,
   &:active {

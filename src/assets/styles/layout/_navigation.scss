@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .navigation {
   grid-row: 1 / 2;
@@ -6,4 +7,11 @@
   z-index: 10;
   padding-top: 4rem;
   height: min-content;
+  @include respond(tab-portrait) {
+    grid-column: center / full;
+    padding-top: 3rem;
+  }
+  @include respond(mobile) {
+    grid-column: center;
+  }
 }

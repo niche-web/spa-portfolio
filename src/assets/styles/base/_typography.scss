@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 @font-face {
   font-family: " SpaceGrotesk";
@@ -31,7 +32,18 @@ h4 {
   &--xl {
     font-size: $xl-size;
     line-height: 1;
-    letter-spacing: -0.25rem;
+    letter-spacing: -2.5px;
+    @include respond(laptop) {
+      font-size: 8rem;
+    }
+    @include respond(tab-landscape) {
+      font-size: 7.2rem;
+      letter-spacing: -2.05px;
+    }
+    @include respond(mobile) {
+      font-size: 4rem;
+      letter-spacing: -1.14px;
+    }
   }
   &--l {
     font-size: $l-size;
@@ -58,6 +70,11 @@ h4 {
 .paragraph {
   font-weight: 500;
   font-style: normal;
-  font-size: $s-size;
+  font-size: clamp($xs-size, 1.8rem, 3rem);
   line-height: 1.6;
+  @include respond(mobile-landscape) {
+    font-size: $xs-size;
+    letter-spacing: 0;
+    line-height: 1.625;
+  }
 }

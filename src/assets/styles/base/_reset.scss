@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 *,
 *::after,
@@ -8,18 +9,23 @@
   box-sizing: inherit;
 }
 
-body,
 html {
+  width: 100vw;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  @include respond(mobile-landscape) {
+    font-size: 52.5%;
+  }
+  @include respond(mobile) {
+    font-size: 62.5%;
+  }
+}
+
+body,
+#root {
+  width: 100%;
   height: 100%;
   scroll-behavior: smooth;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  box-sizing: border-box;
 }
 
 textarea,

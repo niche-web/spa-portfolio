@@ -1,5 +1,5 @@
 @use "../abstracts/variables" as *;
-
+@use "../abstracts/mixins" as *;
 .section-skills {
   width: 100%;
   margin-bottom: 14rem;
@@ -23,15 +23,24 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2.72rem;
     row-gap: 6.9rem;
+    @include respond(mobile) {
+      grid-template-columns: 250px;
+      column-gap: 0;
+    }
   }
 }
 
 .cta {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 22rem;
   padding: 8.4rem 0 9.2rem;
   border-bottom: 1px solid $gray-color;
+  @include respond(mobile) {
+    grid-column: 2 / 3;
+    grid-template-columns: 1fr;
+  }
   &__text {
     .heading {
       margin-bottom: 3.6rem;
