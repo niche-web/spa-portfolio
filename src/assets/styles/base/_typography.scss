@@ -48,7 +48,12 @@ h4 {
   &--l {
     font-size: $l-size;
     line-height: 1.17;
-    letter-spacing: -0.15rem;
+    letter-spacing: -0.15px;
+    @include respond(mobile) {
+      font-size: 3.2rem;
+      line-height: 1.25;
+      letter-spacing: -1px;
+    }
   }
   &--m {
     font-size: $m-size;

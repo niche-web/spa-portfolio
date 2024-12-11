@@ -7,7 +7,7 @@
   background: $primary-color;
 
   display: grid;
-  grid-template-rows: 13.3rem repeat(4, min-content);
+  grid-template-rows: 13.3rem repeat(6, min-content);
   grid-template-columns:
     [full-start] minmax(3.2rem, 1fr) [center-start] repeat(
       12,
@@ -21,23 +21,11 @@
   }
 
   @include respond(mobile) {
-    grid-template-rows: 4.4rem repeat(5, min-content);
+    grid-template-rows: 4.4rem repeat(7, [row-start] min-content [row-end]);
     grid-template-columns:
       [full-start] minmax(1.4rem, 1fr)
       [center-start] 1fr [photo-start] min-content [middle-cut] min-content [photo-end] 1fr
       [center-end] minmax(1.4rem, 1fr) [full-end];
-    row-gap: 8rem;
-  }
-}
-
-.sep-line {
-  height: 1px;
-  grid-column: center;
-  grid-row: 3 / 4;
-  color: $gray-color;
-  margin: 10.4rem 0;
-  @include respond(mobile) {
-    // grid-column: center;
-    grid-row: 4 / 5;
+    // row-gap: 8rem;
   }
 }

@@ -1,5 +1,14 @@
+@use "../abstracts/mixins" as *;
+
 .skill {
+  // width: 34.5rem;
+  @include respond(mobile) {
+    text-align: center;
+  }
   &__topic {
     margin-bottom: 1.4rem;
+    @include respond(mobile) {
+      margin-bottom: 0.1rem;
+    }
   }
 }

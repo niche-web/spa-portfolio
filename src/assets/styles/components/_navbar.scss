@@ -6,10 +6,12 @@
   justify-content: space-between;
   align-items: center;
   @include respond(mobile) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    &:not(.section-projects *) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
   }
   &__logo {
     font-size: 3.2rem;

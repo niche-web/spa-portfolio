@@ -11,11 +11,8 @@
     @include respond(mobile) {
       grid-row: 3 / 4;
       grid-column: center;
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-      background: none;
-      margin-top: -4rem;
-      width: 34.5rem;
+      margin: 4rem 0 8rem;
+      min-width: 34.5rem;
       padding: 0;
     }
   }
@@ -30,6 +27,10 @@
       border-bottom: 0.8rem solid $secondary-color;
     }
     .brake {
+      display: none;
+      @include respond(tab-portrait) {
+        display: initial;
+      }
       @include respond(mobile) {
         display: none;
       }
@@ -50,8 +51,6 @@
       text-align-last: center;
       width: 95%;
     }
-  }
-  &__cta {
   }
   &__photo {
     grid-row: 1 / 3;
@@ -79,7 +78,6 @@
       }
       @include respond(mobile) {
         object-position: center 5.5rem;
-        // filter: brightness() contrast();
       }
     }
   }

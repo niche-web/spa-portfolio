@@ -3,17 +3,20 @@ import Skill from "../components/skill.jsx";
 
 const SectionSkills = () => {
   return (
-    <section className="section-skills">
-      <ul className="section-skills__list">
-        {skills.map((skill, index) => (
-          <Skill
-            key={index}
-            topic={skill.topic}
-            yearsOfExperience={skill.yearsOfExperience}
-          />
-        ))}
-      </ul>
-    </section>
+    <>
+      <div className="section-skills__background"></div>
+      <section className="section-skills">
+        <ul className="section-skills__list">
+          {skills.map((skill, index) => (
+            <Skill
+              key={index}
+              topic={skill.topic}
+              yearsOfExperience={skill.yearsOfExperience}
+            />
+          ))}
+        </ul>
+      </section>
+    </>
   );
 };
 

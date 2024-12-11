@@ -14,14 +14,16 @@
 @use "components/skill";
 @use "components/project";
 @use "components/textfield";
+@use "components/cta";
 
 ////////LAYOUT//////////
 @use "layout/container";
 @use "layout/navigation";
 @use "layout/header";
-@use "layout/main-content";
+@use "layout/section-skills";
+@use "layout/section-projects";
 @use "layout/footer";
 
 ////////PAGES//////////
-@use "pages/home";
+
 ////////THEMES//////////

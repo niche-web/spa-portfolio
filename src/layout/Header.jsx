@@ -21,9 +21,8 @@ const Header = () => {
       <div className="header__main">
         <div className="header__main--container">
           <h1 className="header__heading heading heading--xl">
-            Nice to <wbr />
-            meet you!
-            <wbr className="brake" /> I&rsquo;m <a href="#">Adam Keyes</a>.
+            Nice to <br className="brake" />
+            meet you! I&rsquo;m <a href="#">Adam Keyes</a>.
           </h1>
           <p className="header__paragraph paragraph">
             Based in UK. I&apos;m a frontend developer passionate about building
@@ -32,8 +31,6 @@ const Header = () => {
           <Button classes="header__cta" href="#" />
         </div>
       </div>
-
-      <hr className="sep-line" />
     </>
   );
 };
