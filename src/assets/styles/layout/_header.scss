@@ -11,7 +11,7 @@
     @include respond(mobile) {
       grid-row: 3 / 4;
       grid-column: center;
-      margin: 4rem 0 8rem;
+      margin-top: 4rem 0;
       min-width: 34.5rem;
       padding: 0;
     }
@@ -47,8 +47,6 @@
 
     @include respond(mobile) {
       margin: 4rem auto;
-      text-align: justify;
-      text-align-last: center;
       width: 95%;
     }
   }

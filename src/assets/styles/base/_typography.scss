@@ -82,4 +82,8 @@ h4 {
     letter-spacing: 0;
     line-height: 1.625;
   }
+  @include respond(mobile) {
+    text-align: justify;
+    text-align-last: center;
+  }
 }

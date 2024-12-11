@@ -38,12 +38,7 @@ const CTAForm = () => {
     setMessageIsValid(true);
   };
   return (
-    <form
-      ref={formRef}
-      className="cta__form"
-      onSubmit={handleSubmit}
-      noValidate
-    >
+    <form ref={formRef} className="cta-form" onSubmit={handleSubmit} noValidate>
       <TextField
         isValid={nameIsValid}
         ref={nameRef}
@@ -77,7 +72,7 @@ const CTAForm = () => {
       <Button
         text="send message"
         role="button"
-        className="button heading heading--s cta__form-button"
+        className="button heading heading--s cta-form__button"
       />
     </form>
   );

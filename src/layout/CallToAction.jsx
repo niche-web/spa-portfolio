@@ -1,9 +1,9 @@
-import CTAText from "./CTAText";
-import CTAForm from "./CTAForm";
+import CTAText from "../components/CTAText";
+import CTAForm from "../components/CTAForm";
 
 const CallToAction = () => {
   return (
-    <div className="cta">
+    <div className="footer__cta">
       <CTAText />
       <CTAForm />
     </div>

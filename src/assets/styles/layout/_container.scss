@@ -18,10 +18,11 @@
 
   @include respond(tab-portrait) {
     grid-template-rows: 8.6rem repeat(4, min-content);
+    padding-bottom: 0;
   }
 
   @include respond(mobile) {
-    grid-template-rows: 4.4rem repeat(7, [row-start] min-content [row-end]);
+    grid-template-rows: 12.4rem repeat(7, min-content);
     grid-template-columns:
       [full-start] minmax(1.4rem, 1fr)
       [center-start] 1fr [photo-start] min-content [middle-cut] min-content [photo-end] 1fr

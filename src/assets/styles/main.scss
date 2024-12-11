@@ -14,7 +14,8 @@
 @use "components/skill";
 @use "components/project";
 @use "components/textfield";
-@use "components/cta";
+@use "components/cta-form";
+@use "components/cta-text";
 
 ////////LAYOUT//////////
 @use "layout/container";
@@ -23,6 +24,7 @@
 @use "layout/section-skills";
 @use "layout/section-projects";
 @use "layout/footer";
+@use "layout/cta";
 
 ////////PAGES//////////
 

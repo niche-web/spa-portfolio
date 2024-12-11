@@ -1,6 +1,6 @@
 const CTAText = () => {
   return (
-    <div className="cta__text">
+    <div className="cta-text">
       <h2 className="heading heading--xl">Contact</h2>
       <p className="paragraph">
         I would love to hear about your project and how I could help. Please

@@ -13,7 +13,7 @@
   @include respond(mobile) {
     grid-row: 4 / 5;
     min-width: 34.5rem;
-    margin-bottom: 6.5rem;
+    margin: 8.6rem 0 6.5rem;
     padding: 4rem 0;
     border-bottom: 1px solid $gray-color;
   }

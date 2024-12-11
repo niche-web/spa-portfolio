@@ -1,0 +1,14 @@
+@use "../abstracts/mixins" as *;
+
+.cta-text {
+  width: 100%;
+  .heading {
+    margin-bottom: 3.6rem;
+  }
+  @include respond(tab-portrait) {
+    text-align: center;
+  }
+  @include respond(mobile) {
+    margin-bottom: 2rem;
+  }
+}

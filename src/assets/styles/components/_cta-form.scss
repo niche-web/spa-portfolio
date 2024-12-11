@@ -1,0 +1,15 @@
+@use "../abstracts/mixins" as *;
+
+.cta-form {
+  grid-column: 3 / 4;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  &__button {
+    align-self: end;
+  }
+  @include respond(tab-portrait) {
+    grid-column: 1 / 2;
+  }
+}

@@ -5,14 +5,16 @@
   grid-column: center;
   grid-row: 4 / 5;
   padding-top: 8.5rem;
+  margin-bottom: 13.9rem;
   @include respond(tab-landscape) {
     padding-top: 3.5rem;
+    margin-bottom: 10rem;
   }
   @include respond(mobile) {
     grid-row: 5 / 6;
     min-width: 34.5rem;
-    margin: 0;
     padding-top: 1.5rem;
+    margin-bottom: 8rem;
   }
   &__header {
     width: 100%;

@@ -2,33 +2,74 @@
 @use "../abstracts/mixins" as *;
 
 .footer {
-  grid-column: center;
-  grid-row: 5 / 6;
-  @include respond(mobile) {
-    grid-row: 6 / 7;
-    display: grid;
-    grid-template-columns: 1fr min-content 1fr;
-  }
-  &__background {
+  &__background-color {
     grid-column: full;
-    grid-row: 5 / 6;
+    grid-row: 5 / 7;
     background-color: $tertiary-color;
+
+    @include respond(mobile) {
+      grid-row: 6 / 8;
+    }
+  }
+  &__background-img {
+    grid-column: full-start / col-end 2;
+    grid-row: 5 / 6;
     background-image: url("../../assets/images/pattern-rings.svg");
     background-repeat: no-repeat;
-    background-size: 36.5%;
-    background-position: -20.7rem 32.7rem;
+    background-position: right bottom;
+    margin-right: 3rem;
+    @include respond(tab-portrait) {
+      margin-right: -1rem;
+    }
     @include respond(mobile) {
+      grid-column: full-start / middle-cut;
       grid-row: 6 / 7;
+      margin: 0;
+      margin-bottom: 1rem;
     }
   }
-  .navbar {
-    margin: 4.7rem 0 9.2rem;
+  &__cta {
+    width: 100%;
+    grid-column: center;
+    grid-row: 5 / 6;
 
-    &__social {
-      margin: 0;
+    display: grid;
+    grid-template-columns: 44.5rem minmax(3rem, 1fr) 44.5rem;
+    justify-content: center;
+    padding: 8.4rem 0 4.5rem;
+
+    @include respond(tab-portrait) {
+      grid-template-columns: 44.5rem;
+      grid-template-rows: min-content min-content;
+      row-gap: 4.8rem;
+      padding: 6rem 0 6.5rem;
+    }
+
+    @include respond(mobile) {
+      grid-row: 6 / 7;
+      grid-template-columns: 1fr;
+      padding-bottom: 0;
+    }
+  }
+  &__navbar {
+    border-top: 1px solid $gray-color;
+    grid-column: center;
+    grid-row: 6 / 7;
+    margin: 4.7rem 0 9.2rem;
+    padding-top: 4.7rem;
+    .navbar {
+      &__social {
+        margin: 0;
+      }
+    }
+    @include respond(tab-portrait) {
+      margin: 2.7rem 0 4rem;
+      padding-top: 3rem;
     }
     @include respond(mobile) {
-      grid-column: 2 / 3;
+      grid-row: 7 / 8;
+      margin-top: 8.7rem;
+      padding: 3.9rem 0 6rem;
     }
   }
 }
