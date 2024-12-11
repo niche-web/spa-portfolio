@@ -17,16 +17,24 @@
   &__header {
     width: 100%;
     margin-bottom: 8rem;
+    @include respond(tab-landscape) {
+      margin-bottom: 6rem;
+    }
   }
   &__list {
+    width: 100%;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2.72rem;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
     row-gap: 6.9rem;
+    @include respond(tab-landscape) {
+      column-gap: 2.2rem;
+      row-gap: 6rem;
+    }
     @include respond(mobile) {
-      grid-template-columns: 250px;
-      column-gap: 0;
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
     }
   }
 }

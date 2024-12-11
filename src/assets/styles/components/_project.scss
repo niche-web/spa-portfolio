@@ -1,8 +1,10 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .project {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 2rem;
   &__img {
     width: 100%;
     display: block;
@@ -15,7 +17,7 @@
     text-transform: uppercase;
   }
   &__title {
-    margin-top: 2rem;
+    margin-bottom: 0.7rem;
   }
 
   &__links {
@@ -25,13 +27,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 6rem;
     z-index: 10;
     background-color: $tertiary-color;
     opacity: 0;
     transition: all 0.3s;
     &:hover {
       opacity: 1;
+    }
+    @include respond(tab-landscape) {
+      grid-row: 3 / 4;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 3.2rem;
+      opacity: 1;
+    }
+    @include respond(mobile) {
+      gap: 3rem;
     }
   }
 }
