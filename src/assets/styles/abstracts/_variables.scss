@@ -15,8 +15,8 @@ $s-size: 1.8rem !default;
 $xs-size: clamp(16px, 1.6rem, 3rem) !default;
 
 ///@type Breakpoint
-$bp-laptop: 1160px;
-$bp-tab-land: 1024px;
-$bp-tab-port: 940px;
-$bp-mobile-land: 765px;
-$bp-mobile-port: 650px;
+$bp-laptop: 72.5em; //1160px
+$bp-tab-land: 64em; //1024px
+$bp-tab-port: 58.75em; //940px
+$bp-mobile-land: 47.75em; //764px
+$bp-mobile-port: 40.75em; //652px

@@ -1,7 +1,6 @@
 @use "../abstracts/mixins" as *;
 
 .skill {
-  // width: 34.5rem;
   @include respond(mobile) {
     text-align: center;
   }
