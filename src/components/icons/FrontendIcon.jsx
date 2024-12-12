@@ -1,4 +1,4 @@
-import iconFrontend from "../assets/icons/icon-frontend-mentor.svg";
+import iconFrontend from "/icons/icon-frontend-mentor.svg";
 
 export const FrontendIcon = ({ classes }) => {
   return (
