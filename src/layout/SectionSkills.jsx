@@ -1,5 +1,5 @@
 import { skillList as skills } from "../utils/data.js";
-import Skill from "../components/skill.jsx";
+import Skill from "../components/Skill";
 
 const SectionSkills = () => {
   return (
