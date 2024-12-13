@@ -3,7 +3,7 @@
 export const GithubIcon = () => {
   return (
     <svg className="icon">
-      <use xlinkHref="../../assets/icons/sprite.svg#icon-github"></use>
+      <use xlinkHref="/icons/sprite.svg#icon-github"></use>
     </svg>
   );
 };
