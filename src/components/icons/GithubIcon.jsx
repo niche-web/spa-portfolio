@@ -1,8 +1,8 @@
-import iconGithub from "/icons/sprite.svg#icon-github";
+import iconGithub from "../../assets/icons/sprite.svg#icon-github";
 
-export const GithubIcon = () => {
+export const GithubIcon = ({ classes }) => {
   return (
-    <svg className="icon">
+    <svg className={classes}>
       <use xlinkHref={iconGithub}></use>
     </svg>
   );

@@ -1,9 +1,9 @@
-import iconLinkedin from "../../assets/icons/icon-linkedin.svg#icon-linkedin";
+import iconLinkedin from "../../assets/icons/sprite.svg#icon-linkedin";
 
 export const LinkedinIcon = ({ classes }) => {
   return (
     <svg className={classes}>
-      <use href={iconLinkedin} />
+      <use xlinkHref={iconLinkedin}></use>
     </svg>
   );
 };
