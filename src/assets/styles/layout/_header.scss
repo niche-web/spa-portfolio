@@ -104,11 +104,14 @@
 
     @include respond(tab-portrait) {
       grid-column: col-start 11 / full;
-      background-position: right -45px bottom;
+      background-position: right -65px bottom;
+    }
+    @include respond(mobile-landscape) {
+      background-position: right -55px bottom;
     }
     @include respond(mobile) {
       grid-column: full;
-      background-position: right -75px bottom;
+      background-position: right -70px bottom;
     }
   }
 }

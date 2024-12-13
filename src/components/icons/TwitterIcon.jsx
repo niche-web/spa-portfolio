@@ -1,9 +1,9 @@
-import iconTwitter from "../../assets/icons/sprite.svg#icon-twitter";
+import iconTwitter from "../../assets/icons/sprite.svg";
 
 export const TwitterIcon = ({ classes }) => {
   return (
     <svg className={classes}>
-      <use xlinkHref={iconTwitter}></use>
+      <use xlinkHref={iconTwitter + "#icon-twitter"}></use>
     </svg>
   );
 };
