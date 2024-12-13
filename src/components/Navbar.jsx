@@ -1,8 +1,8 @@
 // import FrontendIcon from "./icons/FrontendIcon";
-import { GithubIcon } from "./icons/GithubIcon?react";
-import { LinkedinIcon } from "./icons/LinkedinIcon?react";
-import { TwitterIcon } from "./icons/TwitterIcon?react";
-import { FrontendIcon } from "./icons/FrontendIcon?react";
+import { GithubIcon } from "./icons/GithubIcon";
+import { LinkedinIcon } from "./icons/LinkedinIcon";
+import { TwitterIcon } from "./icons/TwitterIcon";
+import { FrontendIcon } from "./icons/FrontendIcon";
 
 const Navbar = () => {
   return (
