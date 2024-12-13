@@ -1,4 +1,4 @@
-import iconLinkedin from "../assets/icons/icon-linkedin.svg#icon-linkedin";
+import iconLinkedin from "../../assets/icons/icon-linkedin.svg#icon-linkedin";
 
 export const LinkedinIcon = ({ classes }) => {
   return (
