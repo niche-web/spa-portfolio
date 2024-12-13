@@ -18,6 +18,9 @@
     position: relative;
     border-bottom: 1px solid $gray-color;
     margin-bottom: 0.843rem;
+    &:focus-within {
+      border-bottom: 1px solid $secondary-color;
+    }
   }
   &__error {
     text-align: right;
