@@ -29,7 +29,7 @@
   &__background {
     grid-row: 3 / 4;
     grid-column: col-start 11 / full;
-    background-image: url("../../assets/images/pattern-rings.svg");
+    background-image: url("/images/pattern-rings.svg");
     background-repeat: no-repeat;
     background-position: left bottom;
     @include respond(mobile) {

@@ -82,7 +82,7 @@
   &__background {
     grid-row: 2 / 3;
     grid-column: full / 5;
-    background-image: url("../../assets/images/pattern-rings.svg");
+    background-image: url("/images/pattern-rings.svg");
     background-repeat: no-repeat;
     background-position: right top;
     @include respond(tab-portrait) {
@@ -97,14 +97,14 @@
     grid-row: 2 / 3;
     z-index: 20;
 
-    background-image: url("../../assets/images/pattern-circle.svg");
+    background-image: url("/images/pattern-circle.svg");
     background-repeat: no-repeat;
     background-size: 12.9rem;
     background-position: center bottom 70px;
 
     @include respond(tab-portrait) {
       grid-column: col-start 11 / full;
-      background-position: right -75px bottom;
+      background-position: right -45px bottom;
     }
     @include respond(mobile) {
       grid-column: full;
