@@ -14,7 +14,7 @@ const Header = () => {
           sources={`${photoMobile} 348w, ${photoTablet} 646w, ${photoDesktop} 890w`}
           sizes="(max-width: 650px) 348px, (min-width: 651px and max-width: 940px) 646px, 890px"
           className="photo"
-          // src={photoDesktop}
+          src={photoDesktop}
           alt="Profile photo"
         />
       </div>

@@ -1,9 +1,12 @@
 import ResponsiveImg from "./ResponsiveImg";
 import Button from "./Button";
+import { getProjImgUrl } from "../utils/helper";
 
 const Project = ({ number, title, tagsList }) => {
-  const imagesSources = `/images/thumbnail-project-${number}-large.webp 1080w,
-        /images/thumbnail-project-${number}-small.webp 686w`;
+  const largeImg = getProjImgUrl(number, "large");
+  const smallImg = getProjImgUrl(number, "small");
+
+  const imagesSources = `${largeImg} 1080w, ${smallImg} 686w`;
   const imagesSizes = "(min-width: 780px) 1080px, 686px";
   const tags = tagsList.join(" ");
 
@@ -12,7 +15,7 @@ const Project = ({ number, title, tagsList }) => {
       <ResponsiveImg
         sources={imagesSources}
         sizes={imagesSizes}
-        src={`/images/thumbnail-project-${number}-large.webp`}
+        src={largeImg}
         alt="Project Thumbnail image"
         className="project__img"
       />
