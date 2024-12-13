@@ -1,4 +1,4 @@
-import iconTwitter from "../assets/icons/icon-twitter.svg";
+import iconTwitter from "../../assets/icons/icon-twitter.svg";
 
 export const TwitterIcon = ({ classes }) => {
   return (
