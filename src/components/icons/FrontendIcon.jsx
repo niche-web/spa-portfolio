@@ -1,9 +1,9 @@
-// import iconFrontend from "/icons/icon-frontend-mentor.svg";
+import iconFrontend from "../../assets/icons/sprite.svg#icon-frontend-mentor";
 
-export const FrontendIcon = ({ classes }) => {
+export const FrontendIcon = () => {
   return (
-    <svg className={classes}>
-      <use href="/icons/icon-frontend-mentor.svg#icon-frontend" />
+    <svg className="icon">
+      <use xlinkHref={iconFrontend}></use>
     </svg>
   );
 };
