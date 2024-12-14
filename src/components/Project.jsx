@@ -2,7 +2,7 @@ import ResponsiveImg from "./ResponsiveImg";
 import Button from "./Button";
 import { getProjImgUrl } from "../utils/helper";
 
-const Project = ({ number, title, tagsList }) => {
+const Project = ({ number, title, tagsList, codeLink, projectPreview }) => {
   const largeImg = getProjImgUrl(number, "large");
   const smallImg = getProjImgUrl(number, "small");
 
@@ -24,10 +24,20 @@ const Project = ({ number, title, tagsList }) => {
         <p className="project__tags paragraph">{tags}</p>
       </div>
       <div className="project__links">
-        <Button text="view project" classes="project__live-link" href="#">
+        <Button
+          text="view project"
+          classes="project__live-link"
+          href={projectPreview}
+          target="_blank"
+        >
           view project
         </Button>
-        <Button text="view code" classes="project__code-link" href="#">
+        <Button
+          text="view code"
+          classes="project__code-link"
+          href={codeLink}
+          target="_blank"
+        >
           view code
         </Button>
       </div>

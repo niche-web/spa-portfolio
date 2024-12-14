@@ -18,6 +18,8 @@ const SectionProjects = () => {
             number={project.id}
             title={project.title}
             tagsList={project.tags}
+            projectPreview={project.projectLink}
+            codeLink={project.codeLink}
           />
         ))}
       </ul>
