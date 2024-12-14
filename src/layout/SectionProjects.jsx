@@ -1,6 +1,6 @@
 import Button from "../components/Button.jsx";
 import Project from "../components/Project.jsx";
-import { projectsList as projects } from "../utils/data.js";
+import { customProjectsList as projects } from "../utils/data.js";
 
 const SectionProjects = () => {
   return (

@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div>
         <h4 role="Logo" className="navbar__logo heading">
-          adamkeyes
+          nicheweb
         </h4>
       </div>
       <div className="navbar__social">

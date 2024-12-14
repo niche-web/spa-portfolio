@@ -1,4 +1,4 @@
-import { skillList as skills } from "../utils/data.js";
+import { customSkillList as skills } from "../utils/data.js";
 import Skill from "../components/Skill";
 
 const SectionSkills = () => {

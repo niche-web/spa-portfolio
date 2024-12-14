@@ -11,8 +11,8 @@ export const customSkillList = [
   { topic: "CSS", yearsOfExperience: 4 },
   { topic: "Javascript", yearsOfExperience: 2 },
   { topic: "Accessibility", yearsOfExperience: 4 },
-  { topic: "React", yearsOfExperience: 1 },
-  { topic: "Sass", yearsOfExperience: 1 },
+  { topic: "React", yearsOfExperience: 2 },
+  { topic: "Sass", yearsOfExperience: 2 },
 ];
 
 export const projectsList = [

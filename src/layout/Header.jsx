@@ -1,8 +1,8 @@
 import Button from "../components/Button";
 import ResponsiveImg from "../components/ResponsiveImg";
-import photoDesktop from "../assets/images/image-profile-desktop.webp";
-import photoTablet from "../assets/images/image-profile-tablet.webp";
-import photoMobile from "../assets/images/image-profile-mobile.webp";
+import photoDesktop from "../assets/images/custom/image-profile-desktop.webp";
+import photoTablet from "../assets/images/custom/image-profile-tablet.webp";
+import photoMobile from "../assets/images/custom/image-profile-mobile.webp";
 
 const Header = () => {
   return (
@@ -22,7 +22,7 @@ const Header = () => {
         <div className="header__main--container">
           <h1 className="header__heading heading heading--xl">
             Nice to <br className="brake" />
-            meet you! I&rsquo;m <a href="#">Adam Keyes</a>.
+            meet you! I&rsquo;m <a href="#">nicheweb</a>.
           </h1>
           <p className="header__paragraph paragraph">
             Based in UK. I&apos;m a frontend developer passionate about building

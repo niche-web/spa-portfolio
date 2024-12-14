@@ -11,6 +11,8 @@
 
     grid-row: 1 / 2;
     grid-column: 1 / 2;
+    object-fit: cover;
+    object-position: center;
   }
   &__description &__tags {
     text-align-last: left;
