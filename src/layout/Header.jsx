@@ -25,8 +25,8 @@ const Header = () => {
             meet you! I&rsquo;m <a href="#">nicheweb</a>.
           </h1>
           <p className="header__paragraph paragraph">
-            Based in UK. I&apos;m a frontend developer passionate about building
-            accessible web apps that users love.
+            Based in Poland. I&apos;m a frontend developer passionate about
+            building accessible web apps that users love.
           </p>
           <Button classes="header__cta" href="#" />
         </div>
