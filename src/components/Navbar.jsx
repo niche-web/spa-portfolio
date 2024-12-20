@@ -1,4 +1,3 @@
-// import FrontendIcon from "./icons/FrontendIcon";
 import GithubIcon from "./icons/GithubIcon";
 import LinkedinIcon from "./icons/LinkedinIcon";
 import TwitterIcon from "./icons/TwitterIcon";
@@ -9,20 +8,26 @@ const Navbar = () => {
     <nav className="navbar">
       <div>
         <h4 role="Logo" className="navbar__logo heading">
-          nicheweb
+          <a href="/"> nicheweb</a>
         </h4>
       </div>
       <div className="navbar__social">
-        <a href="#">
+        <a href="https://github.com/niche-web" target="_blank">
           <GithubIcon classes="navbar__icon" />
         </a>
-        <a href="#">
+        <a
+          href="https://www.frontendmentor.io/profile/niche-web"
+          target="_blank"
+        >
           <FrontendIcon classes="navbar__icon" />
         </a>
-        <a href="#">
+        <a
+          href="https://www.linkedin.com/in/norge-rojas-cerulia-ba0749131/"
+          target="_blank"
+        >
           <LinkedinIcon classes="navbar__icon" />
         </a>
-        <a href="#">
+        <a href="https://x.com/Nani45670378" target="_blank">
           <TwitterIcon classes="navbar__icon" />
         </a>
       </div>

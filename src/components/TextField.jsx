@@ -1,32 +1,35 @@
-import { forwardRef } from "react";
-
-const TextField = forwardRef(function TextField(
-  { label, errorMessage, isValid = true, textarea = false, ...props },
-  ref
-) {
+const TextField = ({
+  label,
+  notifyError,
+  errorMessage,
+  textarea = false,
+  value,
+  ...props
+}) => {
   let inputElement = (
     <input
-      ref={ref}
       className="textfield__input-elem"
       placeholder={label}
+      value={value}
       {...props}
     />
   );
   if (textarea)
     inputElement = (
       <textarea
-        ref={ref}
         className="textfield__input-elem"
         placeholder={label}
+        value={value}
         {...props}
       ></textarea>
     );
+
   return (
-    <div className={`textfield ${!isValid ? "textfield__invalid" : ""}`}>
+    <div className={`textfield ${notifyError ? "textfield__invalid" : ""}`}>
       <p className="textfield__input">{inputElement}</p>
       <p className="textfield__error">{errorMessage}</p>
     </div>
   );
-});
+};
 
 export default TextField;
