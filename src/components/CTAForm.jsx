@@ -1,73 +1,98 @@
-import { useRef, useState } from "react";
-import { isEmpty, isEmail } from "../utils/validation";
+import useInput from "../hooks/useInput";
+import { isEmpty, isNotEmail } from "../utils/validation";
+import { sendData } from "../utils/http";
 import TextField from "./TextField";
 import Button from "./Button";
 
 const CTAForm = () => {
-  const [emailIsValid, setEmailIsValid] = useState(true);
-  const [nameIsValid, setNameIsValid] = useState(true);
-  const [messageIsValid, setMessageIsValid] = useState(true);
-
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const messageRef = useRef();
-  const formRef = useRef();
+  const {
+    value: emailValue,
+    isInvalid: emailIsInvalid,
+    showError: emailShowError,
+    setValue: setEmailValue,
+    setShowError: setEmailShowError,
+    handleChange: handleEmailChange,
+  } = useInput("", isNotEmail);
+  const {
+    value: nameValue,
+    isInvalid: nameIsInvalid,
+    showError: nameShowError,
+    setValue: setNameValue,
+    setShowError: setNameShowError,
+    handleChange: handleNameChange,
+  } = useInput("", isEmpty);
+  const {
+    value: messageValue,
+    isInvalid: messageIsInvalid,
+    showError: messageShowError,
+    setValue: setMessageValue,
+    setShowError: setMessageShowError,
+    handleChange: handleMessageChange,
+  } = useInput("", isEmpty);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEmailIsValid(isEmail(emailRef.current.value));
-    setNameIsValid(!isEmpty(nameRef.current.value));
-    setMessageIsValid(!isEmpty(messageRef.current.value));
-    if (
-      isEmail(emailRef.current.value) &&
-      !isEmpty(nameRef.current.value) &&
-      !isEmpty(messageRef.current.value)
-    ) {
-      console.log({
-        nameValue: nameRef.current.value,
-        emailValue: emailRef.current.value,
-        messageValue: messageRef.current.value,
-      });
-      formRef.current.reset();
+    if (nameIsInvalid || emailIsInvalid || messageIsInvalid) {
+      setEmailShowError(true);
+      setNameShowError(true);
+      setMessageShowError(true);
+      return;
     }
+
+    const sendInquiry = async () => {
+      try {
+        const reply = await sendData("http://127.0.0.1:5000/", {
+          name: nameValue,
+          email: emailValue,
+          message: messageValue,
+        });
+        console.log(reply);
+      } catch (error) {
+        console.error(error.message);
+      }
+    };
+    sendInquiry();
+
+    // Reset form
+    setEmailValue("");
+    setMessageValue("");
+    setNameValue("");
+    setEmailShowError(false);
+    setNameShowError(false);
+    setMessageShowError(false);
   };
 
-  const handleFocus = () => {
-    setEmailIsValid(true);
-    setNameIsValid(true);
-    setMessageIsValid(true);
-  };
   return (
-    <form ref={formRef} className="cta-form" onSubmit={handleSubmit} noValidate>
+    <form className="cta-form" onSubmit={handleSubmit} noValidate>
       <TextField
-        isValid={nameIsValid}
-        ref={nameRef}
         label="name"
-        errorMessage="This field is required."
+        notifyError={nameIsInvalid && nameShowError}
+        errorMessage={nameShowError && "This field is required."}
         id="name"
         name="name"
-        onFocus={handleFocus}
+        value={nameValue}
+        onChange={handleNameChange}
       />
       <TextField
-        isValid={emailIsValid}
-        ref={emailRef}
         label="email"
-        errorMessage="Sorry, invalid format here"
+        notifyError={emailIsInvalid && emailShowError}
+        errorMessage={emailIsInvalid && "Sorry, invalid format here"}
         id="email"
         name="email"
         type="email"
-        onFocus={handleFocus}
+        value={emailValue}
+        onChange={handleEmailChange}
       />
       <TextField
-        isValid={messageIsValid}
-        ref={messageRef}
         label="message"
-        errorMessage="This field is required."
+        notifyError={messageIsInvalid && messageShowError}
+        errorMessage={messageIsInvalid && "This field is required."}
         textarea
         id="message"
         name="message"
         rows="3"
-        onFocus={handleFocus}
+        value={messageValue}
+        onChange={handleMessageChange}
       />
       <Button
         text="send message"

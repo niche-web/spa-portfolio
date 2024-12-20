@@ -22,13 +22,17 @@ const Header = () => {
         <div className="header__main--container">
           <h1 className="header__heading heading heading--xl">
             Nice to <br className="brake" />
-            meet you! I&rsquo;m <a href="#">nicheweb</a>.
+            meet you! I&rsquo;m{" "}
+            <a href="https://github.com/niche-web" target="_blank">
+              nicheweb
+            </a>
+            .
           </h1>
           <p className="header__paragraph paragraph">
             Based in Poland. I&apos;m a frontend developer passionate about
             building accessible web apps that users love.
           </p>
-          <Button classes="header__cta" href="#" />
+          <Button classes="header__cta" href="#contact" />
         </div>
       </div>
     </>

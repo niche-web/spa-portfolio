@@ -1,7 +1,7 @@
-export const isEmail = (value) => {
-  return value.includes("@");
+export const isNotEmail = (value) => {
+  return !value.includes("@");
 };
 
 export const isEmpty = (value) => {
-  return value.trim() === "";
+  return value.trim().length === 0;
 };

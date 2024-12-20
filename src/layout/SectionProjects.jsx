@@ -9,7 +9,7 @@ const SectionProjects = () => {
         <h2 className="section-projects__heading heading heading--xl">
           Projects
         </h2>
-        <Button />
+        <Button href="#contact" />
       </header>
       <ul className="section-projects__list">
         {projects.map((project) => (

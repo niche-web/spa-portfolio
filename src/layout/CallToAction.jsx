@@ -3,7 +3,7 @@ import CTAForm from "../components/CTAForm";
 
 const CallToAction = () => {
   return (
-    <div className="footer__cta">
+    <div className="footer__cta" id="contact">
       <CTAText />
       <CTAForm />
     </div>
