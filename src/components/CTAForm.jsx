@@ -67,7 +67,7 @@ const CTAForm = () => {
       <TextField
         label="name"
         notifyError={nameIsInvalid && nameShowError}
-        errorMessage={nameShowError && "This field is required."}
+        errorMessage="This field is required."
         id="name"
         name="name"
         value={nameValue}
@@ -76,7 +76,7 @@ const CTAForm = () => {
       <TextField
         label="email"
         notifyError={emailIsInvalid && emailShowError}
-        errorMessage={emailIsInvalid && "Sorry, invalid format here"}
+        errorMessage="Sorry, invalid format here"
         id="email"
         name="email"
         type="email"
@@ -86,7 +86,7 @@ const CTAForm = () => {
       <TextField
         label="message"
         notifyError={messageIsInvalid && messageShowError}
-        errorMessage={messageIsInvalid && "This field is required."}
+        errorMessage="This field is required."
         textarea
         id="message"
         name="message"
