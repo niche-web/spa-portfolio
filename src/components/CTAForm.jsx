@@ -41,11 +41,14 @@ const CTAForm = () => {
 
     const sendInquiry = async () => {
       try {
-        const reply = await sendData("http://127.0.0.1:5000/", {
-          name: nameValue,
-          email: emailValue,
-          message: messageValue,
-        });
+        const reply = await sendData(
+          "https://www.pythonanywhere.com/user/nicheweb:5173",
+          {
+            name: nameValue,
+            email: emailValue,
+            message: messageValue,
+          }
+        );
         console.log(reply);
       } catch (error) {
         console.error(error.message);
