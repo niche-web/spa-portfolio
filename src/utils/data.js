@@ -9,7 +9,7 @@ export const skillList = [
 export const customSkillList = [
   { topic: "HTML", yearsOfExperience: 4 },
   { topic: "CSS", yearsOfExperience: 4 },
-  { topic: "Javascript", yearsOfExperience: 2 },
+  { topic: "Javascript", yearsOfExperience: 3 },
   { topic: "Accessibility", yearsOfExperience: 4 },
   { topic: "React", yearsOfExperience: 2 },
   { topic: "Sass", yearsOfExperience: 2 },
