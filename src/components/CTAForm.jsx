@@ -1,3 +1,4 @@
+import { useState } from "react";
 import useInput from "../hooks/useInput";
 import { isEmpty, isNotEmail } from "../utils/validation";
 import { sendData } from "../utils/http";
@@ -5,6 +6,8 @@ import TextField from "./TextField";
 import Button from "./Button";
 
 const CTAForm = () => {
+  const [requestState, setRequestState] = useState("idle");
+
   const {
     value: emailValue,
     isInvalid: emailIsInvalid,
@@ -40,29 +43,59 @@ const CTAForm = () => {
     }
 
     const sendInquiry = async () => {
-      console.log(import.meta.env.VITE_API_URL);
-
       try {
+        setRequestState("running");
         const reply = await sendData(import.meta.env.VITE_API_URL, {
           name: nameValue,
           email: emailValue,
           message: messageValue,
         });
-        console.log(reply);
+        if (reply.records) {
+          setRequestState("success");
+          setTimeout(() => setRequestState("idle"), 2000);
+          // Reset form
+          setEmailValue("");
+          setMessageValue("");
+          setNameValue("");
+          setEmailShowError(false);
+          setNameShowError(false);
+          setMessageShowError(false);
+        }
       } catch (error) {
         console.error(error.message);
+        setRequestState("error");
+        setTimeout(() => setRequestState("idle"), 2000);
       }
     };
     sendInquiry();
-
-    // Reset form
-    setEmailValue("");
-    setMessageValue("");
-    setNameValue("");
-    setEmailShowError(false);
-    setNameShowError(false);
-    setMessageShowError(false);
   };
+
+  const showButtonState = () => {
+    if (requestState === "running") {
+      return <p className="heading heading--s">Sending Inquiry ...</p>;
+    } else if (requestState === "success") {
+      return (
+        <p className="heading heading--s success">Inquiry added successfully</p>
+      );
+    } else if (requestState === "error") {
+      return (
+        <p className="heading heading--s error">
+          Sorry, the Inquiry request failed.
+        </p>
+      );
+    }
+  };
+
+  let reqButton =
+    requestState === "idle" ? (
+      <Button
+        text="send message"
+        role="button"
+        className="button heading heading--s cta-form__button"
+      />
+    ) : (
+      showButtonState()
+    );
 
   return (
     <form className="cta-form" onSubmit={handleSubmit} noValidate>
@@ -96,11 +129,7 @@ const CTAForm = () => {
         value={messageValue}
         onChange={handleMessageChange}
       />
-      <Button
-        text="send message"
-        role="button"
-        className="button heading heading--s cta-form__button"
-      />
+      {reqButton}
     </form>
   );
 };
