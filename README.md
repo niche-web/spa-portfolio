@@ -32,12 +32,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/niche-web/spa-portfolio)
-- Live Site URL: [Add live site URL here](https://clever-cendol-c0a1da.netlify.app/)
+- Solution URL: [https://github.com/niche-web/spa-portfolio](https://github.com/niche-web/spa-portfolio)
+- Live Site URL: [https://clever-cendol-c0a1da.netlify.app/](https://clever-cendol-c0a1da.netlify.app/)
 
 ## My process
 
@@ -67,7 +67,7 @@ Chatgpt
 
 - Website - [Norge Rojas Cerulia](https://clever-cendol-c0a1da.netlify.app/)
 - Frontend Mentor - [niche-web](https://www.frontendmentor.io/profile/niche-web)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Twitter - [@Nani45670378](https://x.com/Nani45670378)
 
 ## Acknowledgments
 
