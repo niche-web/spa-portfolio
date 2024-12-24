@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div>
-        <h4 role="Logo" className="navbar__logo heading">
+        <h4 className="navbar__logo heading">
           <a href="/"> nicheweb</a>
         </h4>
       </div>
