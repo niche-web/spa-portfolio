@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div>
         <h4 className="navbar__logo heading">
-          <a href="/"> nicheweb</a>
+          <a href="#header"> nicheweb</a>
         </h4>
       </div>
       <div className="navbar__social">
