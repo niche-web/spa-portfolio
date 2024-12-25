@@ -7,7 +7,7 @@ import photoMobile from "../assets/images/custom/image-profile-mobile.webp";
 const Header = () => {
   return (
     <>
-      <div id="header" className="header__background"></div>
+      <div className="header__background"></div>
       <div className="header__photo-decor"></div>
       <div className="header__photo">
         <ResponsiveImg
