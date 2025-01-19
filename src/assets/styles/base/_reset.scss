@@ -13,6 +13,7 @@ html {
   width: 100vw;
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   @include respond(mobile-landscape) {
     font-size: 52.5%;
   }
