@@ -5,7 +5,7 @@ import FrontendIcon from "./icons/FrontendIcon";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar" role="navigation">
       <div>
         <h4 className="navbar__logo heading">
           <a href="#home"> nicheweb</a>
