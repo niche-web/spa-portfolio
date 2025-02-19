@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 const Navigation = () => {
   return (
     <div className="navigation">
-      <Navbar />
+      <Navbar aria-label="Main Navigation" />
     </div>
   );
 };

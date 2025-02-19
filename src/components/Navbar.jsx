@@ -3,9 +3,9 @@ import LinkedinIcon from "./icons/LinkedinIcon";
 import TwitterIcon from "./icons/TwitterIcon";
 import FrontendIcon from "./icons/FrontendIcon";
 
-const Navbar = () => {
+const Navbar = ({ ...props }) => {
   return (
-    <nav className="navbar" role="navigation">
+    <nav className="navbar" {...props}>
       <div>
         <h4 className="navbar__logo heading">
           <a href="#home"> nicheweb</a>

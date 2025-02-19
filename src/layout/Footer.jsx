@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer__background-img"></div>
       <CallToAction />
       <footer className="footer__navbar">
-        <Navbar />
+        <Navbar aria-label="Footer Navigation" />
       </footer>
     </>
   );
