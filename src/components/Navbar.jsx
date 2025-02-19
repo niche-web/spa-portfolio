@@ -12,22 +12,32 @@ const Navbar = () => {
         </h4>
       </div>
       <div className="navbar__social">
-        <a href="https://github.com/niche-web" target="_blank">
+        <a
+          href="https://github.com/niche-web"
+          target="_blank"
+          aria-label="github account"
+        >
           <GithubIcon classes="navbar__icon" />
         </a>
         <a
           href="https://www.frontendmentor.io/profile/niche-web"
           target="_blank"
+          aria-label="frontendmentor account"
         >
           <FrontendIcon classes="navbar__icon" />
         </a>
         <a
           href="https://www.linkedin.com/in/norge-rojas-cerulia-ba0749131/"
           target="_blank"
+          aria-label="linkedin account"
         >
           <LinkedinIcon classes="navbar__icon" />
         </a>
-        <a href="https://x.com/Nani45670378" target="_blank">
+        <a
+          href="https://x.com/Nani45670378"
+          target="_blank"
+          aria-label="X account"
+        >
           <TwitterIcon classes="navbar__icon" />
         </a>
       </div>
