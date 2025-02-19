@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/niche-web/spa-portfolio](https://github.com/niche-web/spa-portfolio)
-- Live Site URL: [https://clever-cendol-c0a1da.netlify.app/](https://clever-cendol-c0a1da.netlify.app/)
+- Live Site URL: [https://nicheweb-portfolio.netlify.app/](https://nicheweb-portfolio.netlify.app/)
 
 ## My process
 
