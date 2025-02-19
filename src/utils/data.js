@@ -13,6 +13,7 @@ export const customSkillList = [
   { topic: "Accessibility", yearsOfExperience: 4 },
   { topic: "React", yearsOfExperience: 2 },
   { topic: "Sass", yearsOfExperience: 2 },
+  { topic: "Typescript", yearsOfExperience: 1 },
 ];
 
 export const projectsList = [
@@ -69,6 +70,13 @@ export const customProjectsList = [
       "https://github.com/niche-web/Frontend-Mentor---Four-card-feature-section-v2",
     projectLink:
       "https://frontend-mentor-four-card-feature-section-v2.vercel.app/",
+  },
+  {
+    id: 1,
+    title: "Audiophile",
+    tags: ["html", "css", "sass", "react", "typescript"],
+    codeLink: "https://github.com/nicheweb-frontend-challenges/audiophile",
+    projectLink: "https://frontend-audiophile.netlify.app/",
   },
   {
     id: 2,
