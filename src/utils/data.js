@@ -64,15 +64,6 @@ export const projectsList = [
 export const customProjectsList = [
   {
     id: 1,
-    title: "Four card feature section",
-    tags: ["html", "css"],
-    codeLink:
-      "https://github.com/niche-web/Frontend-Mentor---Four-card-feature-section-v2",
-    projectLink:
-      "https://frontend-mentor-four-card-feature-section-v2.vercel.app/",
-  },
-  {
-    id: 1,
     title: "Audiophile",
     tags: ["html", "css", "sass", "react", "typescript"],
     codeLink: "https://github.com/nicheweb-frontend-challenges/audiophile",
