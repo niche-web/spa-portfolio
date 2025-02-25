@@ -112,7 +112,7 @@
     }
     @include respond(mobile) {
       grid-column: full;
-      background-position: right -70px bottom;
+      // background-position: right -70px bottom;
     }
   }
 }
