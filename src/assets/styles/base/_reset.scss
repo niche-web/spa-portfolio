@@ -51,3 +51,9 @@ a:hover,
 a:active {
   color: $secondary-color;
 }
+
+img,
+picture {
+  width: 100%;
+  height: auto;
+}
