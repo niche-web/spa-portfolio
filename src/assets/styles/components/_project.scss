@@ -6,7 +6,8 @@
   grid-template-columns: 1fr;
   row-gap: 2rem;
   &__img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     display: block;
 
     grid-row: 1 / 2;
