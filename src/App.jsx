@@ -12,7 +12,7 @@ function App() {
       <Navigation />
       <Header />
       <SectionSkills />
-      <SectionProjects />
+      {/* <SectionProjects /> */}
       <Footer />
     </Container>
   );
