@@ -6,11 +6,8 @@ const Project = ({ number, title, tagsList, codeLink, projectPreview }) => {
   const largeImg = getProjImgUrl(number, "large");
   const smallImg = getProjImgUrl(number, "small");
 
-  const imagesSources = { large: largeImg, small: smallImg };
-  const imagesSizes = {
-    small: "(max-width: 779px)",
-    large: "(min-width: 780px)",
-  };
+  const imagesSources = [largeImg, smallImg];
+  const imagesSizes = ["(min-width: 780px)", "(max-width: 779px)"];
   const tags = tagsList.join(" ");
 
   return (
