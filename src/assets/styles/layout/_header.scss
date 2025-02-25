@@ -73,10 +73,10 @@
       object-fit: cover;
 
       @include respond(mobile-landscape) {
-        object-position: center;
+        object-position: center bottom;
       }
       @include respond(mobile) {
-        object-position: center 5.5rem;
+        object-position: center bottom;
       }
     }
   }
