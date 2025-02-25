@@ -76,7 +76,7 @@
           object-position: center bottom;
         }
         @include respond(mobile) {
-          object-fit: fill;
+          object-fit: contain;
           object-position: center bottom;
         }
       }
