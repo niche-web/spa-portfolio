@@ -50,7 +50,7 @@ const CTAForm = () => {
           email: emailValue,
           message: messageValue,
         });
-        if (reply.records) {
+        if (reply.status === 200) {
           setRequestState("success");
           setTimeout(() => setRequestState("idle"), 2000);
           // Reset form
@@ -60,6 +60,10 @@ const CTAForm = () => {
           setEmailShowError(false);
           setNameShowError(false);
           setMessageShowError(false);
+        } else {
+          console.log(reply);
+
+          throw new Error("Request failed");
         }
       } catch (error) {
         console.error(error.message);
