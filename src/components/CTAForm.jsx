@@ -50,21 +50,16 @@ const CTAForm = () => {
           email: emailValue,
           message: messageValue,
         });
-        if (reply.status === 200) {
-          setRequestState("success");
-          setTimeout(() => setRequestState("idle"), 2000);
-          // Reset form
-          setEmailValue("");
-          setMessageValue("");
-          setNameValue("");
-          setEmailShowError(false);
-          setNameShowError(false);
-          setMessageShowError(false);
-        } else {
-          console.log(reply);
-
-          throw new Error("Request failed");
-        }
+        setRequestState("success");
+        setTimeout(() => setRequestState("idle"), 2000);
+        // Reset form
+        setEmailValue("");
+        setMessageValue("");
+        setNameValue("");
+        setEmailShowError(false);
+        setNameShowError(false);
+        setMessageShowError(false);
+        console.log(reply);
       } catch (error) {
         console.error(error.message);
         setRequestState("error");

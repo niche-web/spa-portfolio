@@ -5,10 +5,8 @@ export const sendData = async (url, data) => {
     body: JSON.stringify(data),
   });
   if (!response.ok) {
-    console.log(response);
-
     throw new Error(`status: ${response.status}`);
   }
-  const notification = await response.json();
-  return notification;
+  const responseData = await response.json();
+  return responseData;
 };
