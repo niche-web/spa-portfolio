@@ -45,7 +45,7 @@ const CTAForm = () => {
     const sendInquiry = async () => {
       try {
         setRequestState("running");
-        const reply = await sendData(import.meta.env.VITE_API_URL, {
+        await sendData(import.meta.env.VITE_API_URL, {
           name: nameValue,
           email: emailValue,
           message: messageValue,
@@ -59,9 +59,8 @@ const CTAForm = () => {
         setEmailShowError(false);
         setNameShowError(false);
         setMessageShowError(false);
-        console.log(reply);
       } catch (error) {
-        console.error(error.message);
+        console.error(error);
         setRequestState("error");
         setTimeout(() => setRequestState("idle"), 2000);
       }
