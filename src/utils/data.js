@@ -71,18 +71,18 @@ export const customProjectsList = [
   },
   {
     id: 2,
-    title: "Clipboard landing page",
-    tags: ["html", "css"],
-    codeLink: "https://github.com/niche-web/clipboard-landing-page-master",
-    projectLink: "https://clipboard-landing-page-master-44fetezh7.vercel.app/",
+    title: "Tic Tac Toe game",
+    tags: ["html", "css", "js"],
+    codeLink: "https://github.com/niche-web/tic-tac-toe.git",
+    projectLink: "https://master--lucky-axolotl-f2078a.netlify.app/",
   },
   {
     id: 3,
-    title: "Meet landing page",
-    tags: ["html", "css"],
+    title: "GitHub user search app",
+    tags: ["html", "css", "js", "api"],
     codeLink:
-      "https://github.com/nicheweb-frontend-challenges/meet-landing-page.git",
-    projectLink: "https://musing-raman-ba7ea5.netlify.app/",
+      "https://github.com/nicheweb-frontend-challenges/github-user-search-app.git",
+    projectLink: "https://jovial-raman-5b513a.netlify.app/",
   },
   {
     id: 4,
@@ -94,17 +94,17 @@ export const customProjectsList = [
   },
   {
     id: 5,
-    title: "GitHub user search app",
-    tags: ["html", "css", "js", "api"],
+    title: "Meet landing page",
+    tags: ["html", "css"],
     codeLink:
-      "https://github.com/nicheweb-frontend-challenges/github-user-search-app.git",
-    projectLink: "https://jovial-raman-5b513a.netlify.app/",
+      "https://github.com/nicheweb-frontend-challenges/meet-landing-page.git",
+    projectLink: "https://musing-raman-ba7ea5.netlify.app/",
   },
   {
     id: 6,
-    title: "Tic Tac Toe game",
-    tags: ["html", "css", "js"],
-    codeLink: "https://github.com/niche-web/tic-tac-toe.git",
-    projectLink: "https://master--lucky-axolotl-f2078a.netlify.app/",
+    title: "Clipboard landing page",
+    tags: ["html", "css"],
+    codeLink: "https://github.com/niche-web/clipboard-landing-page-master",
+    projectLink: "https://clipboard-landing-page-master-44fetezh7.vercel.app/",
   },
 ];
